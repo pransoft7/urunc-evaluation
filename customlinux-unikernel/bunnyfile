@@ -1,0 +1,18 @@
+#syntax=harbor.nbfc.io/nubificus/bunny:latest
+version: v0.1
+
+platforms:
+    framework: linux
+    monitor: firecracker
+    architecture: x86
+
+rootfs:
+    from: local
+    type: initrd
+    path: rootfs.initrd
+
+kernel:
+    from: local
+    path: vmlinux
+
+cmdline: "/urunit /server"
