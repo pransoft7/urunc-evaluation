@@ -1,0 +1,13 @@
+#syntax=harbor.nbfc.io/nubificus/bunny:latest
+version: v0.1
+
+platforms:
+  framework: unikraft
+  monitor: firecracker
+  architecture: x86
+
+kernel:
+  from: local
+  path: helloworld_fc-x86_64
+
+cmdline: ""
